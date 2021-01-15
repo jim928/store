@@ -1,0 +1,26 @@
+PODS:
+  - Kingfisher (6.0.1)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
+  - SightKit (0.1.9)
+
+DEPENDENCIES:
+  - Kingfisher
+  - SDWebImage
+  - SightKit
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - SDWebImage
+    - SightKit
+
+SPEC CHECKSUMS:
+  Kingfisher: adde87a4f74f6a3845395769354efff593581740
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  SightKit: eaf691612814eb2b687d0c49de1f1cf807fb3cef
+
+PODFILE CHECKSUM: 2b63423fa470878c9e160e5d0663de32400594b7
+
+COCOAPODS: 1.10.0
