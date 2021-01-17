@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382DC13025B3FC33003E529B /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382DC12F25B3FC33003E529B /* AppDefines.swift */; };
 		387E6CDC25B1F52400FE9B82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6CDB25B1F52400FE9B82 /* AppDelegate.swift */; };
 		387E6CE025B1F52400FE9B82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6CDF25B1F52400FE9B82 /* ViewController.swift */; };
 		387E6CE525B1F52600FE9B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387E6CE425B1F52600FE9B82 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		382DC12F25B3FC33003E529B /* AppDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
 		387E6CD825B1F52400FE9B82 /* Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387E6CDB25B1F52400FE9B82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		387E6CDF25B1F52400FE9B82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				387E6CDF25B1F52400FE9B82 /* ViewController.swift */,
 				387E6CFE25B2020C00FE9B82 /* BaseVC.swift */,
 				387E6D0225B2022700FE9B82 /* BaseNavVC.swift */,
+				382DC12F25B3FC33003E529B /* AppDefines.swift */,
 				387E6D0525B205F300FE9B82 /* HomeVC.swift */,
 				387E6D0E25B206F600FE9B82 /* MenuVC.swift */,
 				387E6D1225B2073E00FE9B82 /* DateBuyVC.swift */,
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				387E6CE025B1F52400FE9B82 /* ViewController.swift in Sources */,
+				382DC13025B3FC33003E529B /* AppDefines.swift in Sources */,
 				387E6D1325B2073E00FE9B82 /* DateBuyVC.swift in Sources */,
 				387E6D1625B2091000FE9B82 /* CartVC.swift in Sources */,
 				387E6D0625B205F300FE9B82 /* HomeVC.swift in Sources */,
