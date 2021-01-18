@@ -7,6 +7,16 @@
 
 import Foundation
 
+/*
+ swagger中 post请求
+ password *string
+ (query) //表示该参数是放在url后面 处理
+ 
+ Description
+ cartIds *
+ (body) //表示该参数是放在body里 处理
+ */
+
 public typealias ConfigRqHeadClosure = () -> [String:String]
 
 public enum Local_Error : Error {
@@ -211,6 +221,7 @@ public class SKRq : NSObject{
     public var param:[String:Any] = [:]
     public var method:String = "GET"
     public var header:[String:String] = [:]
+    public var paramInUrl:Bool = true //POST的时候 会存在 param放在url里和放在body里两种情况
     public static var globalHeader:[String:String] = [:]
 
     @discardableResult public func wUrl(_ u:String) -> SKRq {
@@ -228,10 +239,16 @@ public class SKRq : NSObject{
     
     @discardableResult public func wGet() -> SKRq {
         method = "GET"
+        paramInUrl = true
         return self
     }
     @discardableResult public func wPost() -> SKRq {
         method = "POST"
+        paramInUrl = false
+        return self
+    }
+    @discardableResult public func wParamInUrl() -> SKRq {
+        paramInUrl = true
         return self
     }
     
@@ -273,20 +290,45 @@ public class SKRq : NSObject{
             }
 
         }else{
-            guard let url = URL(string: url) else {
-                print("Error: cannot create url with urlString:\(self.url)")
+            if (paramInUrl){
+                var fixString = ""
+                if param.count > 0 {
+                    fixString.append("?")
+                    param.forEach { (key: String, value: Any) in
+                        if (fixString.count>1){
+                            fixString.append("&")
+                        }
+                        fixString.append(key)
+                        fixString.append("=")
+                        fixString.append("\(value)")
+                    }
+                }
                 
-                DispatchQueue.main.async { result(SKResult(d: nil, r: nil, e: Local_Error.invalid_url)) }
-                return self
+                let finalStr = url+fixString
+                guard let url = URL(string: finalStr) else {
+                    print("Error: cannot create url with urlString:\(finalStr)")
+                    
+                    DispatchQueue.main.async { result(SKResult(d: nil, r: nil, e: Local_Error.invalid_url)) }
+                    return self
+                }
+                
+                request = URLRequest(url: url)
+            }else{
+                guard let url = URL(string: url) else {
+                    print("Error: cannot create url with urlString:\(self.url)")
+                    
+                    DispatchQueue.main.async { result(SKResult(d: nil, r: nil, e: Local_Error.invalid_url)) }
+                    return self
+                }
+                
+                //先添加需要的数据到finalParaDic
+                //然后添加传进来的数据到fainalParaDic
+                param.forEach { (key: String, value: Any) in
+                    finalParaDic[key] = value
+                }
+                
+                request = URLRequest(url: url)
             }
-            
-            //先添加需要的数据到finalParaDic
-            //然后添加传进来的数据到fainalParaDic
-            param.forEach { (key: String, value: Any) in
-                finalParaDic[key] = value
-            }
-            
-            request = URLRequest(url: url)
             request.timeoutInterval = api_timeout
             request.httpMethod = method
             var jsonData:Data
@@ -315,9 +357,10 @@ public class SKRq : NSObject{
             if (openRequestLog){
                 print("url:",request.url?.absoluteString ?? "")
                 print("headFields:",request.allHTTPHeaderFields ?? "")
+                print("method:",self.method)
                 print("param:",finalParaDic)
                 if let data = data {
-                    let json = try? JSONSerialization.jsonObject(with: data,options:.allowFragments) as? [String: Any]
+                    let json = try? (JSONSerialization.jsonObject(with: data,options:.allowFragments) as! [String: Any])
                     print("json:",json ?? "")
                     if json == nil {
                         let str = String(data: data, encoding: String.Encoding.utf8) ?? ""

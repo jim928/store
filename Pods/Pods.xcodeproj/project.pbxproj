@@ -1452,30 +1452,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02F478B5942BB9A8A73343BBC0D6EE9C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B134DD2C4A809E5711662F1F4DE2E9F2 /* SightKit.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SightKit/SightKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/SightKit/SightKit.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SightKit;
-				PRODUCT_NAME = SightKit;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		09D0CF79EB1687D7B4E359DC3B91F7D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D830ACA15DD8DD0D6D2A343058EE9A6 /* Kingfisher.debug.xcconfig */;
@@ -1497,6 +1473,30 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1859F46AE200B8A76703AF8461558A01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B134DD2C4A809E5711662F1F4DE2E9F2 /* SightKit.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SightKit/SightKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/SightKit/SightKit.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SightKit;
+				PRODUCT_NAME = SightKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1547,7 +1547,7 @@
 			};
 			name = Debug;
 		};
-		6C4165574E504D7459856FC11A90C5AF /* Release */ = {
+		691B272E41EEA93E51FFC604F1A2EC6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCBFAEC138DF5E4AF6AA5AB2EEE68A47 /* SightKit.release.xcconfig */;
 			buildSettings = {
@@ -1566,7 +1566,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1787,8 +1787,8 @@
 		4177C767580BEB667534282FC02306D7 /* Build configuration list for PBXNativeTarget "SightKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02F478B5942BB9A8A73343BBC0D6EE9C /* Debug */,
-				6C4165574E504D7459856FC11A90C5AF /* Release */,
+				1859F46AE200B8A76703AF8461558A01 /* Debug */,
+				691B272E41EEA93E51FFC604F1A2EC6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

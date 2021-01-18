@@ -15,12 +15,16 @@ class HomeVC: BaseVC {
 
         // Do any additional setup after loading the view.
         
-//        SKRq().wUrl(AppUrl.sso_login.fullUrl).wPost().wHeader(["accept":"*/*"]).wParam(["username":"15002066006","password":"123123"]).resume { (result) in
+        SKRq().wUrl(AppUrl.sso_login.fullUrl).wPost().wParamInUrl().wParam(["username":"jack","password":"123123"]).resume { (result) in
+            let token = SKJSON()["data"]["token"].stringValue
+            print(token)
+//            {
+//            }
+//            print(result.json["data"]["token"].str)
+        }
+//        SKRq().wUrl(AppUrl.home_content.fullUrl).resume { (result) in
 //
 //        }
-        SKRq().wUrl(AppUrl.home_content.fullUrl).resume { (result) in
-            
-        }
     }
     
 

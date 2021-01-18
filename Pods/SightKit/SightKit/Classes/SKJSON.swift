@@ -1384,3 +1384,74 @@ extension SKJSON: Codable {
         }
     }
 }
+
+// MARK: - extra support for app
+protocol JSONable {
+    init?(parameter: SKJSON)
+}
+extension SKJSON {
+    func to<T>(type: T?) -> Any? {
+        if let baseObj = type as? JSONable.Type {
+            if self.type == .array {
+                var arrObject: [Any] = []
+                for obj in self.arrayValue {
+                    let object = baseObj.init(parameter: obj)
+                    arrObject.append(object!)
+                }
+                return arrObject
+            } else {
+                let object = baseObj.init(parameter: self)
+                return object!
+            }
+        }
+        return nil
+    }
+}
+/*
+ class Style: JSONable {
+     let ID              :String!
+     let name            :String!
+     
+     required init(parameter: JSON) {
+         ID            = parameter[“id"].stringValue
+         name          = parameter[“name"].stringValue
+     }
+
+     /*  JSON response format
+     {
+       "status": true,
+       "message": "",
+       "data": [
+         {
+           "id": 1,
+           "name": "Style 1"
+         },
+         {
+           "id": 2,
+           "name": "Style 2"
+         },
+         {
+           "id": 3,
+           "name": "Style 3"
+         }
+       ]
+     }
+     */
+ }
+ 
+ 
+ Alamofire.request(.GET, url).validate().responseJSON { response in
+         switch response.result {
+             case .success(let value):
+                 let json = JSON(value)
+
+                 var styles: [Style] = []
+                 if let styleArr = json[“data"].to(type: Style.self) {
+                     styles = styleArr as! [Style]
+                 }
+                 print("styles: \(styles)")
+             case .failure(let error):
+                 print(error)
+         }
+  }
+ */
