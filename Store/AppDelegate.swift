@@ -25,31 +25,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let tabbarController = UITabBarController()
-        let vc1 = HomeVC()
-        let vc2 = MenuVC()
-        let vc3 = DateBuyVC()
-        let vc4 = CartVC()
-        let vc5 = MineVC()
-        vc1.tabBarItem = UITabBarItem(title: "首页", image: "tab-home".toImg()?.withRenderingMode(.alwaysOriginal), selectedImage: "tab-home-hl".toImg()?.withRenderingMode(.alwaysOriginal))
-        vc2.tabBarItem = UITabBarItem(title: "菜单", image: "tab-menu".toImg()?.withRenderingMode(.alwaysOriginal), selectedImage: "tab-menu-hl".toImg()?.withRenderingMode(.alwaysOriginal))
-        vc3.tabBarItem = UITabBarItem(title: "定期购", image: "tab-buy".toImg()?.withRenderingMode(.alwaysOriginal), selectedImage: "tab-buy-hl".toImg()?.withRenderingMode(.alwaysOriginal))
-        vc4.tabBarItem = UITabBarItem(title: "购物车", image: "tab-cart".toImg()?.withRenderingMode(.alwaysOriginal), selectedImage: "tab-cart-hl".toImg()?.withRenderingMode(.alwaysOriginal))
-        vc5.tabBarItem = UITabBarItem(title: "我的", image: "tab-mine".toImg()?.withRenderingMode(.alwaysOriginal), selectedImage: "tab-mine-hl".toImg()?.withRenderingMode(.alwaysOriginal))
-        self.window?.rootViewController = tabbarController
         self.window?.makeKeyAndVisible()
-        tabbarController.setViewControllers([BaseNavVC.init(rootViewController: vc1),
-                                             BaseNavVC.init(rootViewController: vc2),
-                                             BaseNavVC.init(rootViewController: vc3),
-                                             BaseNavVC.init(rootViewController: vc4),
-                                             BaseNavVC.init(rootViewController: vc5)], animated: true)
         
-        tabbarController.tabBar.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        gotoTabbarVC()
         
-        let vcs = [vc1,vc2,vc3,vc4,vc5]
-        for v in vcs{
-            v.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.4, green: 0.4, blue: 0.4, alpha: 1), NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)], for: .normal)
-            v.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.8235294118, green: 0.5764705882, blue: 0.2549019608, alpha: 1), NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)], for: .selected)
+        return true
+    }
+}
+
+func gotoTabbarVC(){
+    let tabbarController = UITabBarController()
+    let vc1 = HomeVC()
+    let vc2 = CategoryVC()
+    let vc3 = TopicVC()
+    let vc4 = MineVC()
+    vc1.tabBarItem = UITabBarItem(title: "首页", image: "tab-home".toImg()?.withRenderingMode(.alwaysOriginal), selectedImage: "tab-home-hl".toImg()?.withRenderingMode(.alwaysOriginal))
+    vc2.tabBarItem = UITabBarItem(title: "分类", image: "tab-category".toImg()?.withRenderingMode(.alwaysOriginal), selectedImage: "tab-category-hl".toImg()?.withRenderingMode(.alwaysOriginal))
+    vc3.tabBarItem = UITabBarItem(title: "专题", image: "tab-topic".toImg()?.withRenderingMode(.alwaysOriginal), selectedImage: "tab-topic-hl".toImg()?.withRenderingMode(.alwaysOriginal))
+    vc4.tabBarItem = UITabBarItem(title: "我的", image: "tab-me".toImg()?.withRenderingMode(.alwaysOriginal), selectedImage: "tab-me-hl".toImg()?.withRenderingMode(.alwaysOriginal))
+    UIApplication.shared.keyWindow?.rootViewController = tabbarController
+    tabbarController.setViewControllers([BaseNavVC.init(rootViewController: vc1),
+                                         BaseNavVC.init(rootViewController: vc2),
+                                         BaseNavVC.init(rootViewController: vc3),
+                                         BaseNavVC.init(rootViewController: vc4)], animated: true)
+    
+    tabbarController.tabBar.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    
+    let vcs = [vc1,vc2,vc3,vc4]
+    for v in vcs{
+        v.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)], for: .normal)
+        v.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)], for: .selected)
+    }
+    
+    let myAppdelegate = UIApplication.shared.delegate as! AppDelegate
+    tabbarController.delegate = myAppdelegate
+}
+func gotoLoginVC(){
+    let vc = LoginRegisterVC()
+    UIApplication.shared.keyWindow?.rootViewController = vc
+}
+
+func gotoRegisterVC(){
+    let vc = LoginRegisterVC()
+    UIApplication.shared.keyWindow?.rootViewController = vc
+    vc.showRegisterView()
+}
+
+extension AppDelegate : UITabBarControllerDelegate{
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        let index = tabBarController.viewControllers?.index(of: viewController)
+        if index == 3 {
+            if appToken.count == 0 {
+                let alert = UIAlertController.init(title: nil, message: "需要登录", preferredStyle: .alert)
+                alert.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: nil))
+                alert.addAction(UIAlertAction.init(title: "去登录", style: .default, handler: { (action) in
+                    gotoLoginVC()
+                }))
+                tabBarController.present(alert, animated: true, completion: nil)
+                return false
+            }
         }
         
         return true

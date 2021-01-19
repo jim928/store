@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MenuVC: BaseVC {
+class CategoryVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

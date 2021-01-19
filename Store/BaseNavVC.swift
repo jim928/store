@@ -14,11 +14,11 @@ class BaseNavVC: UINavigationController {
         
         // Do any additional setup after loading the view.
         let attrs = [
-            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: pfm18
         ]
         UINavigationBar.appearance().titleTextAttributes = attrs
-        UINavigationBar.appearance().barTintColor = UIColor(red: 17/255.0, green: 17/255.0, blue: 17/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = mainColor
         UINavigationBar.appearance().isTranslucent = false
     }
 }

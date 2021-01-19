@@ -8,13 +8,26 @@
 import UIKit
 
 class LoginRegisterVC: BaseVC {
-
+    
+    var lView = LoginView()
+    var rView = RegisterView()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        lView.addTo(self.view).csFullfill()
+        rView.addTo(self.view).csFullfill()
+        
+        rView.isHidden = true
     }
-    
+    func showLoginView(){
+        lView.isHidden = false
+        rView.isHidden = true
+    }
+    func showRegisterView(){
+        lView.isHidden = true
+        rView.isHidden = false
+    }
 
     /*
     // MARK: - Navigation

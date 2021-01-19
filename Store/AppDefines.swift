@@ -9,7 +9,7 @@ import Foundation
 import SightKit
 
 // MARK: - colors
-//let mainColor = "<#000000#>".toColor
+let mainColor = "27ab83".toColor
 
 // MARK: - urls
 #if DEBUG
@@ -211,4 +211,41 @@ enum AppUrl : String {
 }
 
 // MARK: - other defines
+let kappTokenSavedKey = "kappTokenSavedKey"
+var appToken : String = {
+    let str = UserDefaults.standard.string(forKey: kappTokenSavedKey) ?? ""
+    return str
+}() {
+    didSet{
+        UserDefaults.standard.set(appToken, forKey: kappTokenSavedKey)
+        UserDefaults.standard.synchronize()
+    }
+}
 
+let kuserNameSavedKey = "kuserNameSavedKey"
+var appUserName : String = {
+    let str = UserDefaults.standard.string(forKey: kuserNameSavedKey) ?? ""
+    return str
+}() {
+    didSet{
+        UserDefaults.standard.set(appUserName, forKey: kuserNameSavedKey)
+        UserDefaults.standard.synchronize()
+    }
+}
+
+
+extension SKResult {
+    var success:Bool {
+        if let code = self.json?["code"].intValue , code == 200 {
+            return true
+        }
+        return false
+    }
+    
+    var errorMsg:String {
+        if let error = self.error {
+            return error.localizedDescription
+        }
+        return self.json?["message"].stringValue ?? "未知的错误"
+    }
+}

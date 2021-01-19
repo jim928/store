@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DateBuyVC: BaseVC {
+class TopicVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
