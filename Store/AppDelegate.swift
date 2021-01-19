@@ -27,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         
+        if appToken.count > 0 {
+            SKRq.globalHeader = ["Authorization":appToken]
+        }
+        
         gotoTabbarVC()
         
         return true

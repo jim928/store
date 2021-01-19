@@ -83,12 +83,19 @@ class RegisterView: UIView {
             SKRq().wUrl(AppUrl.sso_register.fullUrl).wPost().wParamInUrl().wParam(["authCode":authCodeView.textField.text.orEmpty,"password":pswView.textField.text.orEmpty,"shareCode":shareCodeView.textField.text.orEmpty,"telephone":phoneNumView.textField.text.orEmpty,"username":userNameView.textField.text.orEmpty]).resume { (result) in
                 hideLoading()
                 
-                if let code = result.json?["code"].intValue,code == 200 {
-                    SKRq().wUrl(AppUrl.sso_login.fullUrl).wParam(["password":pswView.textField.text.orEmpty,"username":userNameView.textField.text.orEmpty]).resume { (res) in
-                        
+                if (result.success){
+                    showLoading()
+                    loginWith(userName: userNameView.textField.text.orEmpty, passWord: pswView.textField.text.orEmpty) { (res) in
+                        hideLoading()
+                        if res.success {
+                            showToast(toast: "注册成功")
+                            gotoTabbarVC()
+                        }else{
+                            showToast(toast: res.errorMsg)
+                        }
                     }
                 }else{
-                    showToast(toast: result.json?["message"].stringValue)
+                    showToast(toast: result.errorMsg)
                 }
             }
         }

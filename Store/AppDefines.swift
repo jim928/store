@@ -233,6 +233,7 @@ var appUserName : String = {
     }
 }
 
+var appUserInfo:UserInfoModel?
 
 extension SKResult {
     var success:Bool {
@@ -247,5 +248,35 @@ extension SKResult {
             return error.localizedDescription
         }
         return self.json?["message"].stringValue ?? "未知的错误"
+    }
+}
+
+func loginWith(userName:String,passWord:String,result:@escaping ((SKResult)->Void)){
+    SKRq().wUrl(AppUrl.sso_login.fullUrl).wPost().wParamInUrl().wParam(["password":passWord,"username":userName]).resume { (res) in
+        hideLoading()
+        if res.success {
+            let header = res.json?["data"]["tokenHead"].stringValue ?? ""
+            let token = res.json?["data"]["token"].stringValue ?? ""
+            appToken = header + token
+            appUserName = userName
+            SKRq.globalHeader = ["Authorization":appToken]
+        }
+        result(res)
+    }
+}
+
+func clearData(){
+    appToken = ""
+    appUserInfo = nil
+}
+
+func refreshUserInfo(complete:@escaping (()->Void)){
+    SKRq().wUrl(AppUrl.sso_info.fullUrl).resume { (result) in
+        if let json = result.json?["data"] {
+            if let userModel = json.to(type: UserInfoModel.self){
+                appUserInfo = userModel as? UserInfoModel
+            }
+        }
+        complete()
     }
 }

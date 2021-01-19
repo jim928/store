@@ -53,13 +53,9 @@ class LoginView: UIView {
         fView.fillSubView(view: loginBtnView)
         NextBtn().wTitle("登 录").addTo(loginBtnView).csCenterX().csLeftRight(constant: 44).addAction {
             showLoading()
-            SKRq().wUrl(AppUrl.sso_login.fullUrl).wPost().wParamInUrl().wParam(["password":pswView.textField.text.orEmpty,"username":userNameView.textField.text.orEmpty]).resume { (res) in
+            loginWith(userName: userNameView.textField.text.orEmpty, passWord: pswView.textField.text.orEmpty) { (res) in
                 hideLoading()
                 if res.success {
-                    let header = res.json?["data"]["tokenHead"].stringValue ?? ""
-                    let token = res.json?["data"]["token"].stringValue ?? ""
-                    appToken = header + token
-                    appUserName = userNameView.textField.text.orEmpty
                     showToast(toast: "登录成功")
                     gotoTabbarVC()
                 }else{
