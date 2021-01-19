@@ -1386,12 +1386,12 @@ extension SKJSON: Codable {
 }
 
 // MARK: - extra support for app
-protocol JSONable {
+public protocol SKJSONable {
     init?(parameter: SKJSON)
 }
-extension SKJSON {
+public extension SKJSON {
     func to<T>(type: T?) -> Any? {
-        if let baseObj = type as? JSONable.Type {
+        if let baseObj = type as? SKJSONable.Type {
             if self.type == .array {
                 var arrObject: [Any] = []
                 for obj in self.arrayValue {
