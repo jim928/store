@@ -102,8 +102,8 @@ class ProfileCell: UITableViewCell {
     func buildViews() {
         wBgColor(.white)
         titleLabel.wFeatures(self,pfr16,grayTextColor).csCenterY().csLeft(20)
-        desLabel.wFeatures(self,pfr14,grayTextColor).csCenterY().csRight(-45)
-        "arrow-right-black".toImgView().addTo(self).csCenterY().csRight(-10).csWidthHeight(35)
+        desLabel.wFeatures(self,pfr14,grayTextColor).csCenterY().csRight(-35)
+        "arrow-right-black".toImgView().addTo(self).csCenterY().csRight().csWidthHeight(35)
         addLine(edges: .bottom, color: grayLineColor, value: 1)
     }
     
