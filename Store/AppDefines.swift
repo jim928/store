@@ -10,6 +10,9 @@ import SightKit
 
 // MARK: - colors
 let mainColor = "27ab83".toColor
+let grayTextColor = "535353".toColor
+let grayBgColor = "e9e9e9".toColor
+let grayLineColor = "c0c0c0".toColor
 
 // MARK: - urls
 #if DEBUG

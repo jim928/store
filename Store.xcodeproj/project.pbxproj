@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047E261B25B7FECE007CF68F /* ChangePswVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E261A25B7FECE007CF68F /* ChangePswVC.swift */; };
+		048AC8EE25B7D22C00CCADC3 /* arrow-right-black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048AC8ED25B7D22C00CCADC3 /* arrow-right-black@2x.png */; };
+		048AC8F225B7D85E00CCADC3 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AC8F125B7D85E00CCADC3 /* ProfileVC.swift */; };
+		048AC8F525B7D8C700CCADC3 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048AC8F425B7D8C700CCADC3 /* back@2x.png */; };
 		04A1505E25B6898500F8728D /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1505D25B6898500F8728D /* UserProtocol.swift */; };
 		04A1506125B6899D00F8728D /* AppProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1506025B6899D00F8728D /* AppProtocol.swift */; };
 		04A1506A25B6BBAE00F8728D /* LoginRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1506925B6BBAE00F8728D /* LoginRegisterVC.swift */; };
@@ -45,6 +49,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047E261A25B7FECE007CF68F /* ChangePswVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePswVC.swift; sourceTree = "<group>"; };
+		048AC8ED25B7D22C00CCADC3 /* arrow-right-black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-right-black@2x.png"; sourceTree = "<group>"; };
+		048AC8F125B7D85E00CCADC3 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		048AC8F425B7D8C700CCADC3 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		04A1505D25B6898500F8728D /* UserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
 		04A1506025B6899D00F8728D /* AppProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocol.swift; sourceTree = "<group>"; };
 		04A1506925B6BBAE00F8728D /* LoginRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterVC.swift; sourceTree = "<group>"; };
@@ -115,7 +123,9 @@
 				04A1507325B6BFFA00F8728D /* login-foot@2x.png */,
 				04A150C525B71AD600F8728D /* avatar@2x.png */,
 				04A150CA25B71B7100F8728D /* arrow-right@2x.png */,
+				048AC8ED25B7D22C00CCADC3 /* arrow-right-black@2x.png */,
 				04A1507425B6BFFA00F8728D /* logo@2x.png */,
+				048AC8F425B7D8C700CCADC3 /* back@2x.png */,
 				04A150B625B70A9400F8728D /* icon-file@2x.png */,
 				04A150AA25B6DC0500F8728D /* tab-category-hl@2x.png */,
 				04A150A725B6DBFB00F8728D /* tab-category@2x.png */,
@@ -165,6 +175,8 @@
 				04A1506925B6BBAE00F8728D /* LoginRegisterVC.swift */,
 				04A1506C25B6BC4000F8728D /* LoginView.swift */,
 				04A1506F25B6BC4A00F8728D /* RegisterView.swift */,
+				048AC8F125B7D85E00CCADC3 /* ProfileVC.swift */,
+				047E261A25B7FECE007CF68F /* ChangePswVC.swift */,
 				04A1507225B6BFEF00F8728D /* imgs */,
 				04A1505C25B6896300F8728D /* dev */,
 				387E6CE425B1F52600FE9B82 /* Assets.xcassets */,
@@ -261,8 +273,10 @@
 				04A1509F25B6DBA100F8728D /* tab-home-hl@2x.png in Resources */,
 				387E6CE825B1F52600FE9B82 /* LaunchScreen.storyboard in Resources */,
 				04A1507A25B6C35400F8728D /* btn-close@2x.png in Resources */,
+				048AC8F525B7D8C700CCADC3 /* back@2x.png in Resources */,
 				04A150CB25B71B7100F8728D /* arrow-right@2x.png in Resources */,
 				04A150C625B71AD600F8728D /* avatar@2x.png in Resources */,
+				048AC8EE25B7D22C00CCADC3 /* arrow-right-black@2x.png in Resources */,
 				387E6CE525B1F52600FE9B82 /* Assets.xcassets in Resources */,
 				04A150A525B6DBEC00F8728D /* tab-me-hl@2x.png in Resources */,
 				04A150BE25B7166C00F8728D /* icon@2x.png in Resources */,
@@ -307,6 +321,7 @@
 				382DC13025B3FC33003E529B /* AppDefines.swift in Sources */,
 				387E6D1325B2073E00FE9B82 /* TopicVC.swift in Sources */,
 				04A1507025B6BC4A00F8728D /* RegisterView.swift in Sources */,
+				048AC8F225B7D85E00CCADC3 /* ProfileVC.swift in Sources */,
 				387E6D1625B2091000FE9B82 /* CartVC.swift in Sources */,
 				387E6D0625B205F300FE9B82 /* HomeVC.swift in Sources */,
 				387E6D1925B2091B00FE9B82 /* MineVC.swift in Sources */,
@@ -315,6 +330,7 @@
 				04A150BB25B70EA100F8728D /* Models.swift in Sources */,
 				387E6CDC25B1F52400FE9B82 /* AppDelegate.swift in Sources */,
 				387E6D0325B2022700FE9B82 /* BaseNavVC.swift in Sources */,
+				047E261B25B7FECE007CF68F /* ChangePswVC.swift in Sources */,
 				04A1506D25B6BC4000F8728D /* LoginView.swift in Sources */,
 				387E6D0F25B206F600FE9B82 /* CategoryVC.swift in Sources */,
 				04A1506A25B6BBAE00F8728D /* LoginRegisterVC.swift in Sources */,
