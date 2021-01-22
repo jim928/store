@@ -1,6 +1,0 @@
-module SightKit {
-  umbrella header "SightKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

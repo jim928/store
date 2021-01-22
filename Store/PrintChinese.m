@@ -1,9 +1,8 @@
 //
-//  PrintBeautifulLog.m
-//  PrintBeautifulLog
+//  PrintChinese.m
+//  Store
 //
-//  Created by 石学谦 on 2018/9/14.
-//  Copyright © 2018年 shixueqian. All rights reserved.
+//  Created by mac on 22/1/2021.
 //
 
 /*
@@ -15,8 +14,7 @@
 
 //DEBUG模式生效
 #ifdef DEBUG
-
-#import "PrintBeautifulLog.h"
+#import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
 #pragma mark - 方法交换
@@ -71,7 +69,7 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
 
 //用此方法交换系统的 descriptionWithLocale: 方法。该方法在代码打印的时候调用。
 - (NSString *)sk_printlog_descriptionWithLocale:(id)locale{
-
+    
     NSString *result = [self convertToJsonString];//转换成JSON格式字符串
     if (!result) {
         result = [self sk_printlog_descriptionWithLocale:locale];//如果无法转换，就使用原先的格式
@@ -81,7 +79,7 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
 }
 //用此方法交换系统的 descriptionWithLocale:indent:方法。功能同上。
 - (NSString *)sk_printlog_descriptionWithLocale:(id)locale indent:(NSUInteger)level {
-
+    
     NSString *result = [self convertToJsonString];
     if (!result) {
         result = [self sk_printlog_descriptionWithLocale:locale indent:level];//如果无法转换，就使用原先的格式
@@ -163,4 +161,5 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
 @end
 
 #endif
+
 

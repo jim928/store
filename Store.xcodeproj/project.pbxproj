@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,9 @@
 		04A150BE25B7166C00F8728D /* icon-default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A150BD25B7166C00F8728D /* icon-default@2x.png */; };
 		04A150C625B71AD600F8728D /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A150C525B71AD600F8728D /* avatar@2x.png */; };
 		04A150CB25B71B7100F8728D /* arrow-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A150CA25B71B7100F8728D /* arrow-right@2x.png */; };
+		04E5820F25BAD88D002E738E /* SightKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04E5820E25BAD88D002E738E /* SightKit */; };
+		04E5821325BADF5A002E738E /* PrintChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E5821225BADF5A002E738E /* PrintChinese.m */; };
+		04E5823C25BAFFA0002E738E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 04E5823B25BAFFA0002E738E /* SDWebImage */; };
 		382DC13025B3FC33003E529B /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382DC12F25B3FC33003E529B /* AppDefines.swift */; };
 		387E6CDC25B1F52400FE9B82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6CDB25B1F52400FE9B82 /* AppDelegate.swift */; };
 		387E6CE525B1F52600FE9B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387E6CE425B1F52600FE9B82 /* Assets.xcassets */; };
@@ -45,7 +48,6 @@
 		387E6D1325B2073E00FE9B82 /* TopicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6D1225B2073E00FE9B82 /* TopicVC.swift */; };
 		387E6D1625B2091000FE9B82 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6D1525B2091000FE9B82 /* CartVC.swift */; };
 		387E6D1925B2091B00FE9B82 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6D1825B2091B00FE9B82 /* MineVC.swift */; };
-		939243C6772C4EC811B02E16 /* libPods-Store.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B5F12FAAF3F9D5220D8C13 /* libPods-Store.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		04A150BD25B7166C00F8728D /* icon-default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-default@2x.png"; sourceTree = "<group>"; };
 		04A150C525B71AD600F8728D /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
 		04A150CA25B71B7100F8728D /* arrow-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-right@2x.png"; sourceTree = "<group>"; };
+		04E5821125BADF59002E738E /* Store-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Store-Bridging-Header.h"; sourceTree = "<group>"; };
+		04E5821225BADF5A002E738E /* PrintChinese.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintChinese.m; sourceTree = "<group>"; };
 		382DC12F25B3FC33003E529B /* AppDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
 		387E6CD825B1F52400FE9B82 /* Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387E6CDB25B1F52400FE9B82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,9 +93,6 @@
 		387E6D1225B2073E00FE9B82 /* TopicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicVC.swift; sourceTree = "<group>"; };
 		387E6D1525B2091000FE9B82 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		387E6D1825B2091B00FE9B82 /* MineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
-		3CC91FC5AAB024F4C8AB55B5 /* Pods-Store.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Store.release.xcconfig"; path = "Target Support Files/Pods-Store/Pods-Store.release.xcconfig"; sourceTree = "<group>"; };
-		BFEF87E7EC9FCAD91748E4A5 /* Pods-Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Store.debug.xcconfig"; path = "Target Support Files/Pods-Store/Pods-Store.debug.xcconfig"; sourceTree = "<group>"; };
-		D1B5F12FAAF3F9D5220D8C13 /* libPods-Store.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Store.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				939243C6772C4EC811B02E16 /* libPods-Store.a in Frameworks */,
+				04E5823C25BAFFA0002E738E /* SDWebImage in Frameworks */,
+				04E5820F25BAD88D002E738E /* SightKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,8 +146,6 @@
 			children = (
 				387E6CDA25B1F52400FE9B82 /* Store */,
 				387E6CD925B1F52400FE9B82 /* Products */,
-				913C6877D06ECB5D5FCEE1DA /* Pods */,
-				CE5215D9279F65782AFD9305 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,30 +177,15 @@
 				04A1506F25B6BC4A00F8728D /* RegisterView.swift */,
 				048AC8F125B7D85E00CCADC3 /* ProfileVC.swift */,
 				047E261A25B7FECE007CF68F /* ChangePswVC.swift */,
+				04E5821225BADF5A002E738E /* PrintChinese.m */,
 				04A1507225B6BFEF00F8728D /* imgs */,
 				04A1505C25B6896300F8728D /* dev */,
 				387E6CE425B1F52600FE9B82 /* Assets.xcassets */,
 				387E6CE625B1F52600FE9B82 /* LaunchScreen.storyboard */,
 				387E6CE925B1F52600FE9B82 /* Info.plist */,
+				04E5821125BADF59002E738E /* Store-Bridging-Header.h */,
 			);
 			path = Store;
-			sourceTree = "<group>";
-		};
-		913C6877D06ECB5D5FCEE1DA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BFEF87E7EC9FCAD91748E4A5 /* Pods-Store.debug.xcconfig */,
-				3CC91FC5AAB024F4C8AB55B5 /* Pods-Store.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		CE5215D9279F65782AFD9305 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D1B5F12FAAF3F9D5220D8C13 /* libPods-Store.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +195,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 387E6CEC25B1F52600FE9B82 /* Build configuration list for PBXNativeTarget "Store" */;
 			buildPhases = (
-				8F90C7146A4AD668535F93BB /* [CP] Check Pods Manifest.lock */,
 				387E6CD425B1F52400FE9B82 /* Sources */,
 				387E6CD525B1F52400FE9B82 /* Frameworks */,
 				387E6CD625B1F52400FE9B82 /* Resources */,
@@ -220,6 +204,10 @@
 			dependencies = (
 			);
 			name = Store;
+			packageProductDependencies = (
+				04E5820E25BAD88D002E738E /* SightKit */,
+				04E5823B25BAFFA0002E738E /* SDWebImage */,
+			);
 			productName = Store;
 			productReference = 387E6CD825B1F52400FE9B82 /* Store.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +223,7 @@
 				TargetAttributes = {
 					387E6CD725B1F52400FE9B82 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -247,6 +236,10 @@
 				Base,
 			);
 			mainGroup = 387E6CCF25B1F52400FE9B82;
+			packageReferences = (
+				04E5820D25BAD88D002E738E /* XCRemoteSwiftPackageReference "SightKit" */,
+				04E5823A25BAFFA0002E738E /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 387E6CD925B1F52400FE9B82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,31 +280,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		8F90C7146A4AD668535F93BB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Store-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		387E6CD425B1F52400FE9B82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -332,6 +300,7 @@
 				387E6D0325B2022700FE9B82 /* BaseNavVC.swift in Sources */,
 				047E261B25B7FECE007CF68F /* ChangePswVC.swift in Sources */,
 				04A1506D25B6BC4000F8728D /* LoginView.swift in Sources */,
+				04E5821325BADF5A002E738E /* PrintChinese.m in Sources */,
 				387E6D0F25B206F600FE9B82 /* CategoryVC.swift in Sources */,
 				04A1506A25B6BBAE00F8728D /* LoginRegisterVC.swift in Sources */,
 			);
@@ -469,10 +438,10 @@
 		};
 		387E6CED25B1F52600FE9B82 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFEF87E7EC9FCAD91748E4A5 /* Pods-Store.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Store/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -482,6 +451,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jim.Store;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Store/Store-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -489,10 +460,10 @@
 		};
 		387E6CEE25B1F52600FE9B82 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CC91FC5AAB024F4C8AB55B5 /* Pods-Store.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Store/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -502,6 +473,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jim.Store;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Store/Store-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -529,6 +501,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04E5820D25BAD88D002E738E /* XCRemoteSwiftPackageReference "SightKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zhanqi/SightKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.20;
+			};
+		};
+		04E5823A25BAFFA0002E738E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04E5820E25BAD88D002E738E /* SightKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04E5820D25BAD88D002E738E /* XCRemoteSwiftPackageReference "SightKit" */;
+			productName = SightKit;
+		};
+		04E5823B25BAFFA0002E738E /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04E5823A25BAFFA0002E738E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 387E6CD025B1F52400FE9B82 /* Project object */;
 }
