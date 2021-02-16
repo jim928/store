@@ -42,8 +42,6 @@
 		387E6CFF25B2020C00FE9B82 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6CFE25B2020C00FE9B82 /* BaseVC.swift */; };
 		387E6D0325B2022700FE9B82 /* BaseNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6D0225B2022700FE9B82 /* BaseNavVC.swift */; };
 		387E6D0625B205F300FE9B82 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6D0525B205F300FE9B82 /* HomeVC.swift */; };
-		387E6D0925B2061700FE9B82 /* Swagger UI.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = 387E6D0825B2061700FE9B82 /* Swagger UI.webarchive */; };
-		387E6D0C25B2062600FE9B82 /* note.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 387E6D0B25B2062600FE9B82 /* note.rtf */; };
 		387E6D0F25B206F600FE9B82 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6D0E25B206F600FE9B82 /* CategoryVC.swift */; };
 		387E6D1325B2073E00FE9B82 /* TopicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6D1225B2073E00FE9B82 /* TopicVC.swift */; };
 		387E6D1625B2091000FE9B82 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387E6D1525B2091000FE9B82 /* CartVC.swift */; };
@@ -254,9 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				387E6D0C25B2062600FE9B82 /* note.rtf in Resources */,
 				04A1509C25B6DB7D00F8728D /* tab-home@2x.png in Resources */,
-				387E6D0925B2061700FE9B82 /* Swagger UI.webarchive in Resources */,
 				04A150A825B6DBFB00F8728D /* tab-category@2x.png in Resources */,
 				04A1507625B6BFFA00F8728D /* logo@2x.png in Resources */,
 				04A150AB25B6DC0500F8728D /* tab-category-hl@2x.png in Resources */,
