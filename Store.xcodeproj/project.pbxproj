@@ -78,6 +78,7 @@
 		04A150CA25B71B7100F8728D /* arrow-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-right@2x.png"; sourceTree = "<group>"; };
 		04E5821125BADF59002E738E /* Store-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Store-Bridging-Header.h"; sourceTree = "<group>"; };
 		04E5821225BADF5A002E738E /* PrintChinese.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintChinese.m; sourceTree = "<group>"; };
+		381FE70F265892FD00EF57C4 /* 30-红色系电商app套图-18p.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "30-红色系电商app套图-18p.zip"; sourceTree = "<group>"; };
 		382DC12F25B3FC33003E529B /* AppDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
 		387E6CD825B1F52400FE9B82 /* Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387E6CDB25B1F52400FE9B82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				387E6D0B25B2062600FE9B82 /* note.rtf */,
+				381FE70F265892FD00EF57C4 /* 30-红色系电商app套图-18p.zip */,
 				387E6D0825B2061700FE9B82 /* Swagger UI.webarchive */,
 				387E6CDB25B1F52400FE9B82 /* AppDelegate.swift */,
 				387E6CFE25B2020C00FE9B82 /* BaseVC.swift */,
